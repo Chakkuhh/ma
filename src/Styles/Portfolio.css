@@ -56,7 +56,7 @@ body {
     margin-top: 15px;
     max-width: 800px;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: #000000;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -72,11 +72,26 @@ body {
 }
 
 @media (max-width: 768px) {
-    .port-text h1 {
-        font-size: 2rem;
+    .main-div {
+        flex-direction: column; /* Stack image and text vertically on mobile */
     }
-    .port-text p {
-        font-size: 1rem;
+
+    .main-div img {
+        width: 100%; /* Make images take full width */
+        height: auto; /* Adjust height based on aspect ratio */
+    }
+
+    .main-div .text {
+        width: 100%; /* Ensure text takes full width */
+        text-align: center; /* Center the text */
+    }
+
+    .main-div.left {
+        flex-direction: column; /* Ensure text is above image on mobile */
+    }
+
+    .main-div.right {
+        flex-direction: column; /* Ensure text is above image on mobile */
     }
 }
 
@@ -177,7 +192,7 @@ h1 {
 p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #ffffff; /* Lighter color for paragraphs */
+    color: #000000; /* Lighter color for paragraphs */
 }
 
 span{

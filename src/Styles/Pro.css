@@ -84,7 +84,7 @@
 /* For tablets and below (screen width <= 768px) */
 @media (max-width: 768px) {
   .Projects{
-    margin-top: 50%;
+    margin-top: 60%;
   }
   .pro-heading h1 {
     font-size: 2rem;
