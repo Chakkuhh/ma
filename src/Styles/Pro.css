@@ -110,10 +110,38 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Make it more flexible */
   }
 }
+@media (max-width: 548px) {
+  .Projects{
+    margin-top: 65%;
+  }
+  .pro-heading h1 {
+    font-size: 2rem;
+  }
+
+  .pro-heading p {
+    font-size: 1rem;
+  }
+
+  /* Adjust the image size and height */
+  .pro-image img {
+    height: 180px; /* Reduce image height for small screens */
+  }
+
+  /* Slightly reduce gap for mobile screens */
+  .pro-images {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Ensure grid is responsive with column-based layout */
+  .pro-images {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Make it more flexible */
+  }
+}
 
 @media (max-width: 480px) {
   .Projects {
-    margin-top: 145%;
+    margin-top: 100%;
     padding: 30px 10px;
   }
 

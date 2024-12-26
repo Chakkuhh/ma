@@ -25,7 +25,7 @@ nav {
 
 /* Scrolled navbar */
 nav.scrolled {
-  background: rgba(0, 0, 0, 0.9); /* Dark background when scrolled */
+  background: rgb(0, 0, 0); /* Dark background when scrolled */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
