@@ -80,6 +80,7 @@
 
 /* Paragraph Styles */
 .home-text p {
+  color: white;
   font-size: 1rem;
   margin: 10px 0;
 }
