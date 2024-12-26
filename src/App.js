@@ -17,7 +17,7 @@ import PortFolio from './IndexFiles/PortFolio';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/ma'>
     <NavBar />
     <Routes>
       <Route path="/" element={<Home />} />
