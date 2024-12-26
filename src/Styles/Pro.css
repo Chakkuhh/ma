@@ -3,16 +3,16 @@
   padding: 50px 20px;
   font-family: 'Poppins', Arial, sans-serif;
   text-align: center;
-  background-color: #f8f9fc; /* Light background color */
-  margin-top: 50px; /* Ensure some spacing above */
-  overflow: hidden; /* Prevent content overlap */
-  clear: both; /* Clear any floating elements inside */
+  background-color: #f8f9fc;
+  margin-top: 50px;
+  overflow: hidden;
+  clear: both;
 }
 
 .pro-heading h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1c2a46; /* Deep blue text */
+  color: #1c2a46;
   margin-bottom: 10px;
 }
 
@@ -22,20 +22,18 @@
   margin-bottom: 40px;
 }
 
-/* Image Grid Container */
 .pro-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px; /* Space between cards */
+  gap: 30px;
   justify-items: center;
-  margin-bottom: 30px; /* Prevent overlap */
+  margin-bottom: 30px;
 }
 
-/* Individual Image Card */
 .pro-image {
   position: relative;
   width: 100%;
-  max-width: 300px; /* Restrict image card size */
+  max-width: 300px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,12 +41,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pro-image:hover {
-  transform: translateY(-10px); /* Hover effect for lift */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Image Styling */
 .pro-image img {
   width: 100%;
   height: 200px;
@@ -110,9 +102,9 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Make it more flexible */
   }
 }
-@media (max-width: 548px) {
+@media (max-width: 547px) {
   .Projects{
-    margin-top: 65%;
+    margin-top: 130%;
   }
   .pro-heading h1 {
     font-size: 2rem;
@@ -141,7 +133,37 @@
 
 @media (max-width: 480px) {
   .Projects {
-    margin-top: 100%;
+    margin-top: 200%;
+    padding: 30px 10px;
+  }
+
+  .pro-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .pro-heading p {
+    font-size: 0.9rem;
+  }
+
+  /* Ensure grid is 1 column on very small screens */
+  .pro-images {
+    grid-template-columns: 1fr; /* Single column for mobile screens */
+    gap: 15px; /* Reduce gap for mobile screens */
+  }
+
+  /* Reduce the padding for smaller image cards */
+  .pro-image {
+    max-width: 100%; /* Full width of container */
+  }
+
+  /* Image height adjustment for smaller screens */
+  .pro-image img {
+    height: 150px; /* Further reduce image height for small screens */
+  }
+}
+@media (max-width: 360px) {
+  .Projects {
+    margin-top: 280%;
     padding: 30px 10px;
   }
 
