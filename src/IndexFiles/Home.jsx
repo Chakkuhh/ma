@@ -7,6 +7,7 @@ import Hvac from '../Components/Hvac'
 import Projects from '../Components/Projects'
 import Service from '../Components/Service'
 import Footer from '../Components/Footer'
+import '../Styles/Main.css'
 
 function Home() {
   return (

@@ -124,3 +124,58 @@ nav .btn:hover {
     margin-top: 10px;
   }
 }
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px; /* Reduced padding for smaller screens */
+  }
+
+  nav ul {
+    display: none; /* Hide menu on small screens */
+    flex-direction: column;
+    width: 100%; /* Full width for mobile */
+    background-color: rgba(0, 0, 0, 0.9); /* Same dark background */
+    position: absolute;
+    top: 80px; /* Position the menu below the navbar */
+    left: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%; /* Full width for each list item */
+  }
+
+  nav ul li .dropdown-menu {
+    position: static;
+    display: none; /* Hide dropdown by default */
+    background: rgba(36, 37, 38, 0.95);
+    width: 100%;
+    box-shadow: none;
+  }
+
+  nav ul li.open .dropdown-menu {
+    display: block; /* Show dropdown when parent li has 'open' class */
+  }
+
+  nav .btn {
+    width: 100%; /* Make the button span full width */
+    margin-top: 10px;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    z-index: 101; /* Ensure the hamburger is on top */
+  }
+
+  .hamburger.active + ul {
+    display: flex; /* Show the menu when hamburger is clicked */
+  }
+
+  .hamburger.active {
+    color: #e63946; /* Change hamburger color when active */
+  }
+}

@@ -148,6 +148,16 @@ img {
   .sec-service .second {
       max-width: 48%; /* Make them 2 in a row */
   }
+
+  /* Reduce padding for smaller screens */
+  .service {
+    padding: 40px 20px;
+  }
+
+  /* Reduce spacing between text and button */
+  .first-service p {
+    font-size: 1rem;
+  }
 }
 
 /* For very small screens (screen width <= 480px) */
@@ -178,5 +188,17 @@ img {
   .sec-service .first,
   .sec-service .second {
       max-width: 100%; /* Full width on smaller screens */
+      padding: 20px; /* Reduce padding */
+  }
+
+  /* Adjust service text size */
+  .sec-service .first p,
+  .sec-service .second p {
+    font-size: 0.85rem; /* Reduce paragraph text size */
+  }
+
+  /* Reduce padding in the main service container */
+  .service {
+    padding: 30px 10px; /* Reduce padding on small screens */
   }
 }

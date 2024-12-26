@@ -1,19 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/NavBar.css";
 import logo from '../Assets/mahdiya-logo.png';
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const nav = document.querySelector("nav");
-      if (window.scrollY > 50) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleScroll = () => {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  };
+
+  const toggleDropdown = (e) => {
+    const parentLi = e.target.closest("li");
+    parentLi.classList.toggle("open");
+  };
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,24 +36,29 @@ function NavBar() {
           <img src={logo} alt="Mahdiya Logo" />
         </Link>
       </div>
-      <ul>
+
+      {/* Hamburger Menu */}
+      <div className={`hamburger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
+        &#9776; {/* Hamburger icon */}
+      </div>
+
+      {/* Navigation Links */}
+      <ul className={isMenuOpen ? "active" : ""}>
         <li><Link to="/" className="active">Home</Link></li>
         <li><Link to="/about">About</Link></li>
-        <li>
+        <li onClick={toggleDropdown}>
           <Link to="#" className="desktop-item">Services</Link>
           <ul className="dropdown-menu">
-            <li><Link to="/home/hvacPre">HVAC SERVICES</Link></li>
-            <li><Link to="/home/hvacReno">HVAC RENOVATION</Link></li>
-            <li><Link to="/home/compressor">COMPRESSOR OVERHAULING</Link></li>
-            <li><Link to="/home/aircooler">AIR COOLED CHILLER</Link></li>
-            <li><Link to="/home/aircondition">AC INSTALLATION</Link></li>
-            <li><Link to="/home/motor">ELECTRIC MOTOR REPAIR</Link></li>
+            <li><Link to="/home/hvacPre">Duct Fabrication And Duct Cleaning</Link></li>
+            <li><Link to="/home/compressor">Carpentry,Flooring & Paininting</Link></li>
+            <li><Link to="/home/aircooler">Chiller Maintanance and Service </Link></li>
+            <li><Link to="/home/aircondition">Air Condition & Ventillation</Link></li>
+            <li><Link to="/home/motor">Electro Mechanical Work</Link></li>
           </ul>
         </li>
         <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li className="btn"><Link to="/contact">Contact</Link></li>
       </ul>
-      <Link to="/get-in-touch" className="btn">GET IN TOUCH</Link>
     </nav>
   );
 }
