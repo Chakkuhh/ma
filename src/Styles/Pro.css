@@ -76,7 +76,7 @@
 /* For tablets and below (screen width <= 768px) */
 @media (max-width: 768px) {
   .Projects{
-    margin-top: 110%;
+    margin-top: 120%;
   }
   .pro-heading h1 {
     font-size: 2rem;
@@ -88,7 +88,7 @@
 
   /* Adjust the image size and height */
   .pro-image img {
-    height: 180px; /* Reduce image height for small screens */
+    height: 150px; /* Reduce image height for small screens */
   }
 
   /* Slightly reduce gap for mobile screens */
@@ -104,7 +104,7 @@
 }
 @media (max-width: 547px) {
   .Projects{
-    margin-top: 140%;
+    margin-top: 150%;
   }
   .pro-heading h1 {
     font-size: 2rem;
@@ -116,7 +116,7 @@
 
   /* Adjust the image size and height */
   .pro-image img {
-    height: 180px; /* Reduce image height for small screens */
+    height: 150px; /* Reduce image height for small screens */
   }
 
   /* Slightly reduce gap for mobile screens */
@@ -133,7 +133,7 @@
 
 @media (max-width: 480px) {
   .Projects {
-    margin-top: 210%;
+    margin-top: 220%;
     padding: 30px 10px;
   }
 
@@ -163,7 +163,7 @@
 }
 @media (max-width: 360px) {
   .Projects {
-    margin-top: 290%;
+    margin-top: 300%;
     padding: 30px 10px;
   }
 
