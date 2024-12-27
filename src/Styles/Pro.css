@@ -76,7 +76,7 @@
 /* For tablets and below (screen width <= 768px) */
 @media (max-width: 768px) {
   .Projects{
-    margin-top: 120%;
+    margin-top: 90%;
   }
   .pro-heading h1 {
     font-size: 2rem;
@@ -104,7 +104,7 @@
 }
 @media (max-width: 547px) {
   .Projects{
-    margin-top: 150%;
+    margin-top: 135%;
   }
   .pro-heading h1 {
     font-size: 2rem;
@@ -133,7 +133,7 @@
 
 @media (max-width: 480px) {
   .Projects {
-    margin-top: 220%;
+    margin-top: 175%;
     padding: 30px 10px;
   }
 
@@ -161,9 +161,9 @@
     height: 150px; /* Further reduce image height for small screens */
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 395px) {
   .Projects {
-    margin-top: 300%;
+    margin-top: 180%;
     padding: 30px 10px;
   }
 
