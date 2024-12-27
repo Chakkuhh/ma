@@ -9,6 +9,7 @@ import philosophy from '../Assets/philosophy.jpg'
 import Footer from '../Components/Footer';
 import { FaHeadphones } from "react-icons/fa";
 import { RxLightningBolt } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 function About() {
   return (
     <div>
@@ -60,8 +61,8 @@ function About() {
 
                 </div>
                 <div className='buttoons'>
-                    <button className='call'> <FaHeadphones />Give Us a Call</button>
-                    <button className='estimate'><RxLightningBolt />Free Estimate</button>
+                    <Link to='/contact'><button className='call'> <FaHeadphones />Give Us a Call</button></Link>
+                    <Link to='/contact'> <button className='estimate'><RxLightningBolt />Free Estimate</button></Link>
                 </div>
         </div>
         <div className="right">

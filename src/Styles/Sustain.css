@@ -101,6 +101,13 @@
   
     .sustain-img img {
       width: 100%;
+      margin-left: -15%;
+    }
+    .certification img {
+      max-width: 50%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
     }
   }
   

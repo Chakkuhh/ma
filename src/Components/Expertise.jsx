@@ -5,8 +5,8 @@ import hvac1 from '../Assets/hvac1.jpg';
 import hvac2 from '../Assets/hvac2.jpg';
 import hvac3 from '../Assets/hvac3.jpg';
 import hvac4 from '../Assets/hvac4.jpg';
-import hvac5 from '../Assets/hvac-renov.jpg';
-import hvac6 from '../Assets/compress.jpg';
+import hvac5 from '../Assets/preview (1).webp';
+import hvac6 from '../Assets/preview (4).webp';
 import { Link } from 'react-router-dom';
 
 

@@ -3,6 +3,7 @@ import industry from '../Assets/ind-adjus.jpg';
 import worker from '../Assets/worker.jpg';
 import screw from '../Assets/ind-adj2.jpg'
 import '../Styles/Home.css'
+import { Link } from 'react-router-dom';
 
 function Banner() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -54,7 +55,7 @@ function Banner() {
             {slide.description.map((text, i) => (
               <p key={i}>{text}</p>
             ))}
-            <button>Read More</button>
+            <Link to='/About'><button>Read More</button></Link>
           </div>
         </div>
       ))}
