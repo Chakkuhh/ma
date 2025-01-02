@@ -33,6 +33,7 @@
 
 /* Text Container with Overlay */
 .home-text {
+  margin-top: 10%;
   background: rgba(0, 0, 0, 0); /* Semi-transparent black overlay */
   color: #ffffff;
   padding: 20px;
@@ -117,6 +118,9 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .home-text {
+    margin-top: 10%;
+  }
   .home-container {
     height: 70vh; /* Reduce height to 70% of the viewport for mobile */
   }
@@ -136,6 +140,9 @@
 }
 
 @media (max-width: 480px) {
+  .home-text {
+    margin-top: 10%;
+  }
   .home-container {
     height: 60vh; /* Further reduce height for very small screens */
   }
