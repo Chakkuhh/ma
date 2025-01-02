@@ -4,14 +4,14 @@ import hvac from '../../src/Assets/telephone.jpg';
 import Footer from '../Components/Footer';
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 
 function Contact() {
   return (
     <div>
-        <div className='conatct-container'>
+      <div className='conatct-container'>
         <div className='contact-background'>
           <img src={hvac} alt='Contact' />
         </div>
@@ -54,35 +54,57 @@ function Contact() {
           ></iframe>
           <div className="contact-info">
             <div className='email'> 
-              <MdEmail />
-            <p>info@mahdiya.ae</p>
+              <a href="mailto:info@mahdiya.ae">
+                <MdEmail />
+                <p>info@mahdiya.ae</p>
+              </a>
             </div>
-           <div className="phone">
-            <FaPhone/>
-            <p>04-2365765</p>
-           </div>
-            
+            <div className="phone">
+              <a href="tel:+0402365765">
+                <FaPhone />
+                <p>04-2365765</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div className="social-med">
-      <p>Follow Us Socially</p>
-      <div className="icons">
-        <div className="icon-wrapper">
-          <FaSquareXTwitter />
-          <span>Twitter</span>
-        </div>
-        <div className="icon-wrapper">
-          <FaFacebook />
-          <span>Facebook</span>
-        </div>
-        <div className="icon-wrapper">
-          <FaInstagramSquare />
-          <span>Instagram</span>
-        </div>
-      </div>
+  <p>Follow Us Socially</p>
+  <div className="icons">
+    <div className="icon-wrapper">
+      <a 
+        href="https://wa.me/1232565895542" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="icon-link">
+        <FaWhatsapp />
+        <span>WhatsApp</span>
+      </a>
     </div>
-      <Footer/>
+    <div className="icon-wrapper">
+      <a 
+        href="https://www.facebook.com/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="icon-link">
+        <FaFacebook />
+        <span>Facebook</span>
+      </a>
+    </div>
+    <div className="icon-wrapper">
+      <a 
+        href="https://www.instagram.com/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="icon-link">
+        <FaInstagramSquare />
+        <span>Instagram</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+      <Footer />
     </div>
   )
 }

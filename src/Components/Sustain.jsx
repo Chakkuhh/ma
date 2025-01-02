@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/Sustain.css';
-import gear from '../Assets/hvac-sus.webp';
+import gear from '../Assets/preview (6).webp';
 import certification from '../Assets/certification.jpg';
 import { useInView } from 'react-intersection-observer';
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import industry from '../Assets/ind-adjus.jpg';
+import industry from '../Assets/frd.jpg';
 import worker from '../Assets/worker.jpg';
 import screw from '../Assets/ind-adj2.jpg'
 import '../Styles/Home.css'

@@ -10,7 +10,7 @@
 /* Default (transparent) navbar */
 nav {
   position: fixed;
-  top: 0;
+  top: 50px; /* Initially below the first-social bar */
   width: 100%;
   height: 80px;
   background: rgba(0, 0, 0, 0); /* Initially transparent */
@@ -20,16 +20,17 @@ nav {
   padding: 0 40px;
   z-index: 100;
   box-shadow: none; /* No shadow when transparent */
-  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+  transition: background 0.3s, box-shadow 0.3s, top 0.3s; /* Smooth transition for position and background */
 }
 
 /* Scrolled navbar */
 nav.scrolled {
-  background: rgb(0, 0, 0); /* Dark background when scrolled */
+  background: rgba(0, 0, 0, 0.679); /* Dark background when scrolled */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  top: 0; /* Moves to the top when scrolled */
 }
 
-/* Other navbar styles */
+/* Logo styling */
 nav .logo img {
   height: 50px;
   display: inline-block;
@@ -58,11 +59,11 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   color: #fff;
-  background: #e63946;
+  background: #e639477c;
   border-radius: 5px;
 }
 
-/* Dropdown Menu */
+/* Dropdown menu */
 nav ul li .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -80,11 +81,6 @@ nav ul li:hover .dropdown-menu {
   display: block;
 }
 
-nav ul li .dropdown-menu li {
-  padding: 0;
-  margin: 0;
-}
-
 nav ul li .dropdown-menu li a {
   display: block;
   color: #fff;
@@ -96,7 +92,6 @@ nav ul li .dropdown-menu li a {
 
 nav ul li .dropdown-menu li a:hover {
   background: #3A3B3C;
-  border-radius: 0;
 }
 
 nav .btn {
@@ -116,60 +111,18 @@ nav .btn:hover {
 
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    margin: 20px 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li .dropdown-menu {
-    position: static;
-    box-shadow: none;
-  }
-
-  nav .btn {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    padding: 0 20px;
-  }
-
-  nav ul {
     display: none;
     flex-direction: column;
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 80px;
     left: 0;
     padding: 0;
+    width: 100%;
   }
 
   nav ul li {
     margin: 10px 0;
-    width: 100%;
-  }
-
-  nav ul li .dropdown-menu {
-    position: static;
-    display: none;
-    background: rgba(36, 37, 38, 0.95);
-    width: 100%;
-    box-shadow: none;
-  }
-
-  nav ul li.open .dropdown-menu {
-    display: block;
-  }
-
-  nav .btn {
-    width: 100%;
-    margin-top: 10px;
   }
 
   .hamburger {
@@ -187,4 +140,90 @@ nav .btn:hover {
   .hamburger.active {
     color: #e63946;
   }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Styling for first-social bar */
+.first-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Initially transparent */
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  position: fixed; /* Positioned fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it appears above the navbar */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth scroll-out effect */
+}
+
+/* Smooth hide on scroll */
+.first-social.hidden {
+  transform: translateY(-100%); /* Moves out of view */
+}
+
+/* Background change when scrolling */
+.first-social.scrolled {
+  background-color: rgba(36, 37, 38, 0.9); /* Add a background on scroll */
+}
+
+/* Email content styling */
+.email-content-section {
+  display: flex; /* Display in flexbox */
+  align-items: center; /* Vertically center the content */
+  gap: 10px; /* Add space between items */
+  color: white; /* Set text color to white */
+}
+
+.email-content-section p {
+  color: white;
+}
+
+/* Navbar below the first-social */
+.navbar {
+  position: fixed; /* Ensure navbar stays fixed */
+  top: 50px; /* Initially below the first-social */
+  z-index: 998;
+  transition: top 0.3s ease; /* Smooth transition for position */
+}
+
+/* Navbar moves to the top when first-social hides */
+.navbar.scrolled {
+  top: 0; /* Move to the very top */
+}
+
+@media (max-width: 768px) {
+  .email-content-section p {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}
+.social-media-section {
+  padding: 15px;
+}
+
+.social-media-section svg:hover{
+  transform: scale(1.2);
+}
+.social-media-section svg {
+  font-size: 15px; /* Adjust the icon size */
+  margin-right: 15px; /* Space between icons */
+}
+.no-style {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  display: inline-flex; /* Keeps layout consistent */
+  align-items: center; /* Aligns icon and text */
+}
+
+.no-style:hover {
+  text-decoration: none; /* No underline on hover */
+  color: inherit; /* Keeps hover styles intact */
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/About.css'
 import abouts from '../Assets/About.jpg'
-import hvac from '../../src/Assets/hvac-renov.jpg';
+import hvac from '../../src/Assets/preview (6).webp';
 import about from '../Assets/about-us.jpg'
 import vission from '../Assets/vision.jpg'
 import mission from '../Assets/mission.jpg'
@@ -61,14 +61,19 @@ function About() {
 
                 </div>
                 <div className='buttoons'>
-                    <Link to='/contact'><button className='call'> <FaHeadphones />Give Us a Call</button></Link>
+                <a href="04-2365765">
+  <button className='call'>
+    <FaHeadphones />
+    Give Us a Call
+  </button>
+   </a>
                     <Link to='/contact'> <button className='estimate'><RxLightningBolt />Free Estimate</button></Link>
                 </div>
         </div>
         <div className="right">
             <img src={about} />
             <h3>We Build for Your Comfort</h3>
-            <p>Any Questions? Call:<span>04-2365765</span></p>
+            <a href="04-2365765"> <p>Any Questions? Call:<span>04-2365765</span></p> </a>
 
         </div>
       </div>

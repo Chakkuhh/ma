@@ -1,15 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../Styles/NavBar.css";
 import logo from '../Assets/mahdiya-logo.png';
-import { Link } from "react-router-dom";
+import { MdEmail, MdOutlineMailOutline } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current route
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  document.addEventListener("scroll", () => {
+    const firstSocial = document.querySelector(".first-social");
+    const scrollPosition = window.scrollY;
+  
+    if (scrollPosition > 50) {
+      firstSocial.classList.add("hidden");
+    } else {
+      firstSocial.classList.remove("hidden");
+    }
+  });
+  
   const handleScroll = () => {
     const nav = document.querySelector("nav");
     if (window.scrollY > 50) {
@@ -30,6 +49,43 @@ function NavBar() {
   }, []);
 
   return (
+    <>
+  <div className="first-social">
+  {/* Contact Information */}
+  <div className="email-content-section">
+    {/* Email */}
+    <a href="mailto:info@mahdiya.ae" className="no-style">
+      <MdEmail />
+      <p>info@mahdiya.ae</p>
+    </a>
+    {/* Phone */}
+    <a href="tel:+0402365765" className="no-style">
+      <FaPhoneAlt />
+      <p>04-2365765</p>
+    </a>
+    {/* Location */}
+    <a 
+      href="https://www.google.com/maps/search/?api=1&query=Alqusais,+Dubai" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="no-style"
+    >
+      <IoLocation />
+      <p>Alqusais, Dubai</p>
+    </a>
+  </div>
+
+  {/* Social Media Links */}
+  <div className="social-media-section">
+      <FaFacebook />
+    
+      <FaSquareXTwitter />
+   <FaLinkedin />
+  </div>
+</div>
+
+
+    
     <nav>
       <div className="logo">
         <Link to="/">
@@ -44,22 +100,91 @@ function NavBar() {
 
       {/* Navigation Links */}
       <ul className={isMenuOpen ? "active" : ""}>
-        <li><Link to="/" className="active">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li>
+          <Link
+            to="/"
+            className={location.pathname === "/" ? "active" : ""}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
+            className={location.pathname === "/about" ? "active" : ""}
+          >
+            About
+          </Link>
+        </li>
         <li onClick={toggleDropdown}>
-          <Link to="#" className="desktop-item">Services</Link>
+          <Link
+            to="#"
+            className={location.pathname.startsWith("/home") ? "active" : ""}
+          >
+            Services
+          </Link>
           <ul className="dropdown-menu">
-            <li><Link to="/home/hvacPre">Duct Fabrication And Duct Cleaning</Link></li>
-            <li><Link to="/home/compressor">Carpentry,Flooring & Paininting</Link></li>
-            <li><Link to="/home/aircooler">Chiller Maintanance and Service </Link></li>
-            <li><Link to="/home/aircondition">Air Condition & Ventillation</Link></li>
-            <li><Link to="/home/motor">Electro Mechanical Work</Link></li>
+            <li>
+              <Link
+                to="/home/hvacPre"
+                className={location.pathname === "/home/hvacPre" ? "active" : ""}
+              >
+                Duct Fabrication And Duct Cleaning
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/home/compressor"
+                className={location.pathname === "/home/compressor" ? "active" : ""}
+              >
+                Carpentry, Flooring & Painting
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/home/aircooler"
+                className={location.pathname === "/home/aircooler" ? "active" : ""}
+              >
+                Chiller Maintenance and Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/home/aircondition"
+                className={location.pathname === "/home/aircondition" ? "active" : ""}
+              >
+                Air Condition & Ventilation
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/home/motor"
+                className={location.pathname === "/home/motor" ? "active" : ""}
+              >
+                Electro Mechanical Work
+              </Link>
+            </li>
           </ul>
         </li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li className="btn"><Link to="/contact">Contact</Link></li>
+        <li>
+          <Link
+            to="/portfolio"
+            className={location.pathname === "/portfolio" ? "active" : ""}
+          >
+            Portfolio
+          </Link>
+        </li>
+        <li className="btn">
+          <Link
+            to="/contact"
+            className={location.pathname === "/contact" ? "active" : ""}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
+    </>
   );
 }
 
