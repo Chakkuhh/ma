@@ -202,11 +202,11 @@ nav .btn:hover {
 
 @media (max-width: 768px) {
   .email-content-section p {
-    font-size: 12px; /* Reduce font size for smaller screens */
+    font-size: 6px; /* Reduce font size for smaller screens */
   }
 }
 .social-media-section {
-  padding: 15px;
+  padding: 7px;
 }
 
 .social-media-section svg:hover{
