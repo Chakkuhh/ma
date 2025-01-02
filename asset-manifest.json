@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/ma/static/css/main.230214c4.css",
-    "main.js": "/ma/static/js/main.d41b7a58.js",
+    "main.css": "/ma/static/css/main.6530e459.css",
+    "main.js": "/ma/static/js/main.3b65b778.js",
     "static/js/488.d9e0c6c7.chunk.js": "/ma/static/js/488.d9e0c6c7.chunk.js",
-    "static/media/ind-adjus.jpg": "/ma/static/media/ind-adjus.9f1c4b5b9d2c459f2876.jpg",
     "static/media/ind-adj2.jpg": "/ma/static/media/ind-adj2.1e342a7ef4659f7c8cc9.jpg",
     "static/media/commercial4.webp": "/ma/static/media/commercial4.895fbfc482409c765ed5.webp",
     "static/media/hvac4.jpg": "/ma/static/media/hvac4.a1b99b061f30c9b7315d.jpg",
@@ -15,8 +14,11 @@
     "static/media/about-us.jpg": "/ma/static/media/about-us.40f4b2a1537f492894d0.jpg",
     "static/media/Copeland-2.jpg": "/ma/static/media/Copeland-2.b0d317ebe4328d94dd5a.jpg",
     "static/media/concorde.jpg": "/ma/static/media/concorde.2d784718a76f3d0c4de1.jpg",
-    "static/media/hvac-sus.webp": "/ma/static/media/hvac-sus.74a9a685a7f70891e51b.webp",
+    "static/media/preview (2).webp": "/ma/static/media/preview (2).e4dae8de91299dda097e.webp",
+    "static/media/frd.jpg": "/ma/static/media/frd.361d4bb2510b22e8c3f7.jpg",
+    "static/media/preview (4).webp": "/ma/static/media/preview (4).b14c00275c5ab1243c91.webp",
     "static/media/grasso.jpg": "/ma/static/media/grasso.beaf85e0f3cc610528da.jpg",
+    "static/media/preview (6).webp": "/ma/static/media/preview (6).4fc69f29a5400337e6b2.webp",
     "static/media/electricimg.jpg": "/ma/static/media/electricimg.9de217dda2151639a784.jpg",
     "static/media/hvac-chiller.jpg": "/ma/static/media/hvac-chiller.0f0745a2d3f013a78e35.jpg",
     "static/media/comp1.jpg": "/ma/static/media/comp1.e4969944bcd3614fa0ff.jpg",
@@ -38,7 +40,6 @@
     "static/media/hvac-chiller-1.jpg": "/ma/static/media/hvac-chiller-1.ed3a96c4d89381f7071a.jpg",
     "static/media/hvac-git.jpg": "/ma/static/media/hvac-git.9128ff05c95789af2c3d.jpg",
     "static/media/Carrier.jpg": "/ma/static/media/Carrier.a58f2e2dcbb91af9c459.jpg",
-    "static/media/compress.jpg": "/ma/static/media/compress.92fc30fe8a1631d542f6.jpg",
     "static/media/suncity.jpg": "/ma/static/media/suncity.eb0a3f2b4671ab9e7d33.jpg",
     "static/media/HVAC-Renovation-Work.jpg": "/ma/static/media/HVAC-Renovation-Work.5025c7fefd559c70705d.jpg",
     "static/media/hvac-chiller-reno.jpg": "/ma/static/media/hvac-chiller-reno.969001ab616bf655c007.jpg",
@@ -62,12 +63,12 @@
     "static/media/vision.jpg": "/ma/static/media/vision.f5ae83524b6e0a5e02e7.jpg",
     "static/media/mahdiya-logo.png": "/ma/static/media/mahdiya-logo.0269be413c68dddad774.png",
     "index.html": "/ma/index.html",
-    "main.230214c4.css.map": "/ma/static/css/main.230214c4.css.map",
-    "main.d41b7a58.js.map": "/ma/static/js/main.d41b7a58.js.map",
+    "main.6530e459.css.map": "/ma/static/css/main.6530e459.css.map",
+    "main.3b65b778.js.map": "/ma/static/js/main.3b65b778.js.map",
     "488.d9e0c6c7.chunk.js.map": "/ma/static/js/488.d9e0c6c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.230214c4.css",
-    "static/js/main.d41b7a58.js"
+    "static/css/main.6530e459.css",
+    "static/js/main.3b65b778.js"
   ]
 }
